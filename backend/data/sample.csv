@@ -1,0 +1,21 @@
+date,description,category,amount,department,vendor
+2026-01-05,Office stationery purchase,Office Supplies,125.00,Administration,Staples Inc
+2026-01-08,Cloud hosting fees,IT & Software,850.00,IT,Amazon Web Services
+2026-01-12,Staff training workshop,Training & Development,2200.00,HR,SkillPath
+2026-01-15,Fuel reimbursement - field audit,Travel & Transport,310.50,Audit,Internal
+2026-01-20,External audit fees,Professional Services,15000.00,Finance,Deloitte
+2026-01-22,Office cleaning services,Facilities,400.00,Administration,CleanCo
+2026-02-01,Laptop purchase,IT Equipment,1350.00,IT,Dell
+2026-02-05,Telephone & internet,Utilities,220.00,Administration,Vodacom
+2026-02-10,Staff welfare - team lunch,Staff Welfare,680.00,HR,Internal
+2026-02-14,Postage & courier,Postage,45.00,Administration,DHL
+2026-02-18,Legal consultation,Professional Services,7500.00,Finance,Webber Wentzel
+2026-02-25,Advertising - LinkedIn ads,Marketing,3200.00,Sales,LinkedIn
+2026-03-03,Stationery - printer paper,Office Supplies,180.00,Administration,Staples Inc
+2026-03-07,Software licence renewal,IT & Software,960.00,IT,Microsoft
+2026-03-11,Conference registration,Training & Development,1100.00,Management,SAICA
+2026-03-15,Petty cash - miscellaneous,Miscellaneous,250.00,Administration,Various
+2026-03-19,Vehicle maintenance,Travel & Transport,760.00,Operations,AutoFix
+2026-03-22,Office rent - March,Rent & Lease,45000.00,Administration,BuildCo Properties
+2026-03-28,Bank charges,Bank Charges,315.00,Finance,Standard Bank
+2026-03-31,Electricity - March,Utilities,1850.00,Administration,Eskom

@@ -1,0 +1,121 @@
+DEMO ORGANIZATION — BUDGET RULES & CHART OF ACCOUNTS (FY 2026)
+
+== BUDGET LINES ==
+
+1. OFFICE SUPPLIES
+   Budget Code: OPS-001
+   Annual Budget: R 18,000
+   Per-transaction Limit: R 2,000
+   Approval Required Above: R 1,000
+   Eligible Expenses: Stationery, printer consumables, paper, pens, folders, packaging materials.
+   Ineligible: Personal items, furniture, electronic equipment.
+
+2. IT & SOFTWARE
+   Budget Code: ITS-002
+   Annual Budget: R 120,000
+   Per-transaction Limit: R 15,000
+   Approval Required Above: R 5,000
+   Eligible Expenses: Software licences, cloud hosting, SaaS subscriptions, antivirus, domain registration.
+   Ineligible: Hardware (see IT Equipment), personal software.
+
+3. IT EQUIPMENT
+   Budget Code: ITE-003
+   Annual Budget: R 80,000
+   Per-transaction Limit: R 20,000
+   Approval Required Above: R 8,000
+   Eligible Expenses: Laptops, desktops, monitors, networking hardware, printers, servers.
+   Ineligible: Software (see IT & Software), consumables.
+
+4. TRAVEL & TRANSPORT
+   Budget Code: TRV-004
+   Annual Budget: R 45,000
+   Per-transaction Limit: R 5,000
+   Approval Required Above: R 2,000
+   Eligible Expenses: Fuel reimbursements, public transport, vehicle hire, parking, tolls for business travel.
+   Ineligible: Personal travel, fines, vehicle purchase.
+
+5. TRAINING & DEVELOPMENT
+   Budget Code: TRD-005
+   Annual Budget: R 60,000
+   Per-transaction Limit: R 10,000
+   Approval Required Above: R 3,000
+   Eligible Expenses: Workshops, conferences, online courses, professional certifications, study materials.
+   Ineligible: Membership fees (see Professional Memberships), social events.
+
+6. STAFF WELFARE
+   Budget Code: STW-006
+   Annual Budget: R 25,000
+   Per-transaction Limit: R 3,000
+   Approval Required Above: R 1,500
+   Eligible Expenses: Team lunches, staff events, wellness activities, gifts for milestones.
+   Ineligible: Individual personal expenses, alcohol above 20% of bill.
+
+7. PROFESSIONAL SERVICES
+   Budget Code: PRF-007
+   Annual Budget: R 300,000
+   Per-transaction Limit: R 50,000
+   Approval Required Above: R 20,000
+   Eligible Expenses: External audit fees, legal consultation, consulting, tax advisory, valuations.
+   Ineligible: Recurring operational services (see Facilities), internal headcount costs.
+
+8. MARKETING & ADVERTISING
+   Budget Code: MKT-008
+   Annual Budget: R 90,000
+   Per-transaction Limit: R 15,000
+   Approval Required Above: R 5,000
+   Eligible Expenses: Digital ads, print media, branding, events sponsorship, website development.
+   Ineligible: Staff costs, non-business promotional items.
+
+9. RENT & LEASE
+   Budget Code: RNT-009
+   Annual Budget: R 560,000
+   Per-transaction Limit: R 50,000
+   Approval Required Above: R 45,000 (CFO sign-off)
+   Eligible Expenses: Office/warehouse rent, equipment leases, vehicle leases.
+   Ineligible: Purchase of property.
+
+10. UTILITIES
+    Budget Code: UTL-010
+    Annual Budget: R 35,000
+    Per-transaction Limit: R 5,000
+    Approval Required Above: R 2,500
+    Eligible Expenses: Electricity, water, internet, telephone landlines.
+    Ineligible: Personal mobile phones, TV subscriptions.
+
+11. FACILITIES & MAINTENANCE
+    Budget Code: FAC-011
+    Annual Budget: R 40,000
+    Per-transaction Limit: R 8,000
+    Approval Required Above: R 3,000
+    Eligible Expenses: Cleaning services, repairs, pest control, security, waste disposal.
+    Ineligible: Capital improvements (must be capitalised).
+
+12. BANK CHARGES
+    Budget Code: BNK-012
+    Annual Budget: R 6,000
+    Per-transaction Limit: No limit (bank-initiated)
+    Approval Required Above: N/A (auto-approved)
+    Eligible Expenses: Monthly bank fees, transaction charges, SWIFT fees.
+    Ineligible: Interest on loans (separate budget line).
+
+13. MISCELLANEOUS
+    Budget Code: MSC-013
+    Annual Budget: R 12,000
+    Per-transaction Limit: R 1,000
+    Approval Required Above: R 500
+    Notes: Last-resort budget line. Finance manager must confirm no other budget line applies.
+
+14. POSTAGE & COURIER
+    Budget Code: PST-014
+    Annual Budget: R 5,000
+    Per-transaction Limit: R 500
+    Approval Required Above: R 300
+    Eligible Expenses: Stamps, courier services, registered mail for business correspondence.
+    Ineligible: Personal parcels.
+
+== GENERAL POLICIES ==
+- All transactions require a valid invoice or receipt.
+- Transactions above approval threshold require written pre-approval from the relevant budget holder.
+- VAT-registered suppliers: only claim input VAT with a valid tax invoice.
+- Split transactions to circumvent per-transaction limits are strictly prohibited.
+- Budget overspends require CFO approval before the expense is incurred.

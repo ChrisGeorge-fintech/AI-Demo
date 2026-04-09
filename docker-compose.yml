@@ -1,0 +1,30 @@
+services:
+  backend:
+    build: ./backend
+    container_name: ai_demo_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persist SQLite database and ChromaDB index across restarts
+      - ./backend/ai_demo.db:/app/ai_demo.db
+      - ./backend/chroma_db:/app/chroma_db
+      - ./backend/data:/app/data:ro
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build: ./frontend
+    container_name: ai_demo_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      backend:
+        condition: service_healthy
