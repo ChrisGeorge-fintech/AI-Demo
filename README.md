@@ -339,13 +339,51 @@ All endpoints except `/health` require a `Bearer` JWT token in the `Authorizatio
 
 | Method | Path | Body | Returns |
 |--------|------|------|---------|
-| `POST` | `/api/chat/message` | `{message, history?}` | SSE stream — events: `data: {"chunk":"...","done":false}` |
+| `POST` | `/api/chat/message` | `multipart/form-data` (see below) | SSE stream — events: `data: {"chunk":"...","done":false}` |
+
+**Chat request fields (multipart/form-data):**
+
+| Field | Type | Required | Notes |
+|-------|------|----------|-------|
+| `message` | string (Form) | Yes | The user's text message |
+| `history` | string (Form) | No | JSON array — `[{"role":"user"\|"model","content":"..."}]` |
+| `files` | File[] | No | Up to 3 files (.pdf / .csv / .txt), max 10 MB each |
+
+**SSE event format:**
+```json
+{ "chunk": "...", "done": false }
+```
+Final event: `{ "chunk": "", "done": true }`
 
 ### Data Visualisation
 
 | Method | Path | Body | Returns |
 |--------|------|------|---------|
-| `POST` | `/api/data/query` | `{question}` | `{job_id, chart_type, title, x_label, y_label, data[]}` |
+| `POST` | `/api/data/query` | `{question}` | `{job_id, summary, visuals[]}` |
+
+**Response schema:**
+
+```json
+{
+  "job_id": "uuid",
+  "summary": "Plain-English answer quoting exact figures.",
+  "visuals": [
+    {
+      "type": "bar" | "line" | "pie" | "table",
+      "title": "...",
+      "x_label": "...",
+      "y_label": "...",
+      "data": [{"label": "...", "value": 0}],
+      "columns": ["col1", "col2"],
+      "rows": [["cell", "cell"]]
+    }
+  ]
+}
+```
+
+- `summary` is always present. `visuals` contains 1–3 charts or tables.
+- For `bar`, `line`, and `pie` types: `data` is populated; `columns`/`rows` are omitted.
+- For `table` type: `columns` + `rows` are populated; `data` is omitted.
 
 ### Receipts
 
@@ -379,13 +417,15 @@ Each classification item:
 
 ### `backend/data/sample.csv`
 
-A 20-row demo accounting dataset used by the Data Visualisation page. Columns:
+The CSV dataset used by the Data Visualisation page. Expected columns (rename yours to match, or use any column names — the pipeline reads column names dynamically):
 
 ```
 date, description, category, amount, department, vendor
 ```
 
-Replace this file with real data to use the portal with actual figures. The backend re-reads the file on every query — no restart needed.
+Replace this file with your own data — even large files (3,000+ rows) are supported. The backend reads the full file on every query via the two-step pipeline; no restart is needed.
+
+> **How the pipeline works:** On each query, Gemini 2.0 Flash first reads the schema summary (column names, data types, value ranges) and writes a pandas expression. The backend executes that expression safely against the full dataset to get exact figures. A second Gemini call then formats those exact results into the structured visual response. This means filter queries, percentiles, conditional aggregations, and period comparisons all return precise numbers — even for large CSVs.
 
 ### `backend/data/budget_rules.txt`
 
@@ -402,6 +442,107 @@ The file is chunked and embedded into ChromaDB on first startup. **If you update
 Remove-Item -Recurse -Force "backend\chroma_db"
 # Then restart uvicorn
 ```
+
+---
+
+## Using the Portal
+
+All pages require login. Use the credentials set in `ADMIN_USERNAME` / `ADMIN_PASSWORD` (default: `admin` / `changeme123`).
+
+---
+
+### Chatbot (`/chat`)
+
+An accounting and auditing expert assistant with streaming responses.
+
+**To ask a question:**
+1. Type your message in the input box and press **Enter** or click **Send**.
+2. The assistant streams its answer in real time with full markdown formatting (tables, bold, lists, code blocks).
+
+**To attach files:**
+1. Click the **paperclip** icon to open the file picker.
+2. Select up to **3 files** — supported formats: `.pdf`, `.csv`, `.txt`.
+3. Each file must be under **10 MB**.
+4. File names appear as chips above the input box. Click **×** to remove a file.
+5. On send, the file contents are injected as context into the prompt (PDFs are OCR-extracted; CSVs and TXTs are decoded as plain text).
+
+**Tips:**
+- Attach a balance sheet or ledger export to ask questions about specific figures.
+- Attach a CSV of transactions to get Gemini's analysis without leaving the chat.
+- Conversation history is maintained within the session — ask follow-up questions naturally.
+
+---
+
+### Data Visualisation (`/data-viz`)
+
+Ask natural-language questions about the `sample.csv` dataset and receive interactive charts.
+
+**To query the data:**
+1. Type a question in the input box (examples below) and press **Enter** or click **Analyse**.
+2. A loading spinner appears while the backend executes the two-step pipeline.
+3. The response shows:
+   - A **summary card** with a plain-English answer quoting exact figures.
+   - Up to **3 interactive visuals** (bar, line, pie charts, or data tables).
+
+**Example questions:**
+```
+What are the total expenses by category?
+Show monthly spend trends as a line chart.
+Which department has the highest average transaction amount?
+What are the top 5 vendors by total spend?
+How much was spent on travel above R5,000?
+What percentage of total spend does each category represent?
+```
+
+**Chart interactions:**
+- **Hover** over bars, lines, and pie slices for exact values in a tooltip.
+- For 3 visuals: the first two are side-by-side; the third spans full width.
+- Tables have right-aligned numeric columns and hover-highlighted rows.
+
+**Replacing the dataset:**
+Copy your CSV to `backend/data/sample.csv` and reload the page. No restart required. The pipeline auto-detects column types including date columns (parsed from ISO 8601, `DD/MM/YYYY`, and common formats).
+
+---
+
+### Receipt Scanner (`/receipts`)
+
+Upload PDF receipt scans for structured extraction, then email the results.
+
+**To scan receipts:**
+1. Drag and drop one or more PDF files onto the upload zone — or click to browse.
+2. Enter the **destination email address** in the email field.
+3. Click **Upload & Process**.
+4. A job ID is returned immediately. The page polls for status every 2.5 seconds.
+5. Once complete, the extracted receipt data appears in a table on the page and an HTML-formatted email is sent to the address provided.
+
+**What is extracted per receipt:**
+- Vendor name, date, line items (description + amount), subtotal, tax, total.
+
+**Requirements:**
+- Files must be `.pdf` format.
+- Tesseract OCR must be installed for scanned (image-based) PDFs. Text-layer PDFs work without Tesseract.
+- A valid `RESEND_API_KEY` is required for email delivery. If not set, extraction still works but no email is sent.
+
+---
+
+### Transaction Classifier (`/transactions`)
+
+Classify transactions against your organisation's budget rules.
+
+**To classify transactions:**
+1. Enter one or more transactions using the row inputs — each row has a **Description** and **Amount** field.
+2. Click **+ Add Row** to add more rows, or **Load samples** to prefill with example transactions.
+3. Click **Classify Transactions**.
+4. Results appear in a colour-coded compliance table:
+   - **Green** badge — meets budget requirements.
+   - **Red** badge — does not meet requirements.
+5. Each row shows the matched budget code, budget line, and a plain-English reason.
+
+**How it works:**
+Each transaction description is embedded and compared against the budget rules in ChromaDB (vector similarity search). The top matching rules are retrieved and passed to Gemini alongside the transaction amount for a compliance verdict.
+
+**Updating budget rules:**
+Edit `backend/data/budget_rules.txt`, then delete `backend/chroma_db/` and restart the backend to rebuild the vector index.
 
 ---
 

@@ -2,6 +2,8 @@
 
 import { useState, FormEvent } from "react";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
@@ -9,74 +11,167 @@ import {
 
 const COLORS = ["#2563eb", "#16a34a", "#d97706", "#dc2626", "#7c3aed", "#0891b2", "#db2777", "#65a30d"];
 
-interface ChartData {
-  chart_type: "bar" | "line" | "pie";
+// ── Types ──────────────────────────────────────────────────────────────────
+
+interface ChartVisual {
+  type: "bar" | "line" | "pie";
   title: string;
   x_label?: string;
   y_label?: string;
   data: { label: string; value: number }[];
 }
 
+interface TableVisual {
+  type: "table";
+  title: string;
+  columns: string[];
+  rows: (string | number)[][];
+}
+
+type Visual = ChartVisual | TableVisual;
+
+interface AnalysisResult {
+  summary: string;
+  visuals: Visual[];
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+
 function getToken(): string {
   return document.cookie.split("; ").find((r) => r.startsWith("token="))?.split("=")[1] ?? "";
 }
 
-function Chart({ result }: { result: ChartData }) {
-  const recharts_data = result.data.map((d) => ({ name: d.label, value: d.value }));
+// ── Visual components ──────────────────────────────────────────────────────
 
-  if (result.chart_type === "pie") {
+function ChartCard({ v }: { v: ChartVisual }) {
+  const chartData = v.data.map((d) => ({ name: d.label, value: d.value }));
+
+  const tooltipFormatter = (val: number) =>
+    val >= 1000 ? val.toLocaleString(undefined, { minimumFractionDigits: 0 }) : val;
+
+  if (v.type === "pie") {
     return (
-      <ResponsiveContainer width="100%" height={380}>
+      <ResponsiveContainer width="100%" height={320}>
         <PieChart>
-          <Pie data={recharts_data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={140} label={({ name, percent }) => `${name} (${(percent * 100).toFixed(1)}%)`}>
-            {recharts_data.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
+          <Pie
+            data={chartData}
+            dataKey="value"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            outerRadius={110}
+            label={({ name, percent }) => `${name} (${(percent * 100).toFixed(1)}%)`}
+            labelLine={false}
+          >
+            {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
           </Pie>
-          <Tooltip formatter={(v: number) => v.toLocaleString()} />
-          <Legend />
+          <Tooltip formatter={(val: number) => tooltipFormatter(val)} />
+          <Legend wrapperStyle={{ fontSize: 12 }} />
         </PieChart>
       </ResponsiveContainer>
     );
   }
 
-  if (result.chart_type === "line") {
+  if (v.type === "line") {
     return (
-      <ResponsiveContainer width="100%" height={380}>
-        <LineChart data={recharts_data} margin={{ top: 5, right: 20, bottom: 20, left: 10 }}>
+      <ResponsiveContainer width="100%" height={320}>
+        <LineChart data={chartData} margin={{ top: 5, right: 24, bottom: 28, left: 16 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-          <XAxis dataKey="name" label={{ value: result.x_label, position: "insideBottom", offset: -10 }} tick={{ fontSize: 12 }} />
-          <YAxis label={{ value: result.y_label, angle: -90, position: "insideLeft" }} tick={{ fontSize: 12 }} />
-          <Tooltip formatter={(v: number) => v.toLocaleString()} />
-          <Line type="monotone" dataKey="value" stroke="#2563eb" strokeWidth={2} dot={{ r: 4 }} />
+          <XAxis dataKey="name" tick={{ fontSize: 11 }} label={v.x_label ? { value: v.x_label, position: "insideBottom", offset: -16, fontSize: 11 } : undefined} />
+          <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v} label={v.y_label ? { value: v.y_label, angle: -90, position: "insideLeft", fontSize: 11 } : undefined} />
+          <Tooltip formatter={(val: number) => tooltipFormatter(val)} />
+          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Line type="monotone" dataKey="value" stroke={COLORS[0]} strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 6 }} name={v.y_label || "Value"} />
         </LineChart>
       </ResponsiveContainer>
     );
   }
 
+  // bar (default)
   return (
-    <ResponsiveContainer width="100%" height={380}>
-      <BarChart data={recharts_data} margin={{ top: 5, right: 20, bottom: 20, left: 10 }}>
+    <ResponsiveContainer width="100%" height={320}>
+      <BarChart data={chartData} margin={{ top: 5, right: 24, bottom: 28, left: 16 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-        <XAxis dataKey="name" label={{ value: result.x_label, position: "insideBottom", offset: -10 }} tick={{ fontSize: 12 }} />
-        <YAxis label={{ value: result.y_label, angle: -90, position: "insideLeft" }} tick={{ fontSize: 12 }} />
-        <Tooltip formatter={(v: number) => v.toLocaleString()} />
-        <Bar dataKey="value" fill="#2563eb" radius={[4, 4, 0, 0]}>
-          {recharts_data.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
+        <XAxis dataKey="name" tick={{ fontSize: 11 }} label={v.x_label ? { value: v.x_label, position: "insideBottom", offset: -16, fontSize: 11 } : undefined} />
+        <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v} label={v.y_label ? { value: v.y_label, angle: -90, position: "insideLeft", fontSize: 11 } : undefined} />
+        <Tooltip formatter={(val: number) => tooltipFormatter(val)} cursor={{ fill: "#f0f4ff" }} />
+        <Legend wrapperStyle={{ fontSize: 12 }} />
+        <Bar dataKey="value" radius={[4, 4, 0, 0]} name={v.y_label || "Value"}>
+          {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
         </Bar>
       </BarChart>
     </ResponsiveContainer>
   );
 }
 
+function TableCard({ v }: { v: TableVisual }) {
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-sm">
+        <thead>
+          <tr className="bg-gray-50 border-b text-xs text-gray-500 font-medium uppercase tracking-wide">
+            {v.columns.map((col, i) => (
+              <th key={i} className="px-3 py-2 text-left whitespace-nowrap">{col}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {v.rows.map((row, ri) => (
+            <tr key={ri} className="border-b last:border-0 hover:bg-gray-50">
+              {row.map((cell, ci) => (
+                <td key={ci} className={`px-3 py-2 ${typeof cell === "number" ? "text-right font-mono tabular-nums" : ""}`}>
+                  {typeof cell === "number" ? cell.toLocaleString() : cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function VisualCard({ visual, index }: { visual: Visual; index: number }) {
+  const typeLabel: Record<string, string> = { bar: "Bar", line: "Line", pie: "Pie", table: "Table" };
+  const typeBadgeColor: Record<string, string> = {
+    bar: "bg-blue-50 text-blue-700",
+    line: "bg-purple-50 text-purple-700",
+    pie: "bg-amber-50 text-amber-700",
+    table: "bg-gray-100 text-gray-600",
+  };
+
+  return (
+    <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+      <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between gap-2">
+        <h3 className="font-medium text-gray-800 text-sm">{visual.title}</h3>
+        <span className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${typeBadgeColor[visual.type]}`}>
+          {typeLabel[visual.type]}
+        </span>
+      </div>
+      <div className="p-4">
+        {visual.type === "table" ? (
+          <TableCard v={visual as TableVisual} />
+        ) : (
+          <ChartCard v={visual as ChartVisual} />
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── Page ───────────────────────────────────────────────────────────────────
+
 const EXAMPLES = [
-  "Show total amount by category as a bar chart",
-  "Show expenses by department as a pie chart",
-  "Show spending over time as a line chart",
+  "Show total amount by category",
+  "Break down expenses by department",
+  "Show spending over time",
   "Which vendor has the highest total spend?",
+  "Compare categories by number of transactions and total value",
 ];
 
 export default function DataVizPage() {
   const [question, setQuestion] = useState("");
-  const [result, setResult] = useState<ChartData | null>(null);
+  const [result, setResult] = useState<AnalysisResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -102,6 +197,10 @@ export default function DataVizPage() {
     }
   }
 
+  // Choose grid layout based on visual count
+  const vizCount = result?.visuals?.length ?? 0;
+  const gridClass = vizCount === 1 ? "grid grid-cols-1" : "grid grid-cols-1 lg:grid-cols-2 gap-4";
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-4">
@@ -110,8 +209,9 @@ export default function DataVizPage() {
         <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Live CSV Feed</span>
       </header>
 
-      <main className="flex-1 max-w-4xl mx-auto w-full px-6 py-8">
-        <form onSubmit={handleSubmit} className="flex gap-3 mb-6">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-6 py-8 space-y-6">
+        {/* Search bar */}
+        <form onSubmit={handleSubmit} className="flex gap-3">
           <input
             type="text"
             value={question}
@@ -130,7 +230,7 @@ export default function DataVizPage() {
         </form>
 
         {/* Example prompts */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2">
           {EXAMPLES.map((ex) => (
             <button
               key={ex}
@@ -142,10 +242,12 @@ export default function DataVizPage() {
           ))}
         </div>
 
+        {/* Error */}
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-600 mb-6">{error}</div>
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-600">{error}</div>
         )}
 
+        {/* Loading */}
         {loading && (
           <div className="bg-white rounded-2xl border border-gray-200 p-12 flex items-center justify-center">
             <div className="text-center text-gray-400">
@@ -155,10 +257,33 @@ export default function DataVizPage() {
           </div>
         )}
 
+        {/* Results */}
         {result && !loading && (
-          <div className="bg-white rounded-2xl border border-gray-200 p-6">
-            <h2 className="text-base font-semibold mb-4">{result.title}</h2>
-            <Chart result={result} />
+          <div className="space-y-4">
+            {/* Summary text */}
+            <div className="bg-white border border-gray-200 rounded-2xl px-6 py-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">Analysis</span>
+              </div>
+              <div className="prose prose-sm prose-gray max-w-none
+                prose-p:my-1 prose-p:leading-relaxed
+                prose-strong:font-semibold prose-strong:text-gray-900
+                prose-ul:my-1 prose-ul:pl-5 prose-li:my-0.5">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{result.summary}</ReactMarkdown>
+              </div>
+            </div>
+
+            {/* Visuals grid */}
+            <div className={gridClass}>
+              {result.visuals.map((v, i) => (
+                <div key={i} className={
+                  // Odd-count layouts: last item spans both columns
+                  vizCount % 2 !== 0 && i === vizCount - 1 ? "lg:col-span-2" : ""
+                }>
+                  <VisualCard visual={v} index={i} />
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </main>
