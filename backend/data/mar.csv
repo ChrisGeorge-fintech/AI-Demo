@@ -1,115 +1,115 @@
-Date,Opening Balance,Description,Debit,Credit,Net Movement,Running Balance,Counterparty Name,Payment Method,Invoice Number,Payment Reference,Cheque Number
-2025-03-01,-578973,Customer payment,61236,0,61236,-517737,Loyalty Member 001,Bank Transfer,INV-2025-00467,SET-REF-000467,
-2025-03-01,-578973,Supplier paid,0,20878,-20878,-538615,West Africa Petroleum,Bank Transfer,INV-2025-01137,REF-001137,
-2025-03-01,-578973,Utility paid,0,17869,-17869,-556484,Electricity,Bank Transfer,INV-2025-01108,REF-001108,
-2025-03-01,-578973,Cash deposited,45780,0,45780,-510704,Internal,,DEP-REF-000241,,Cash Deposit
-2025-03-01,-578973,Payroll paid,0,124360,-124360,-635064,Payroll,Bank Transfer,INV-2025-00013,REF-000013,
-2025-03-01,-578973,Supplier paid,0,134080,-134080,-769144,West Africa Petroleum,Bank Transfer,INV-2025-00273,REF-000273,
-2025-03-02,-578973,Payroll paid,0,77982,-77982,-847126,Payroll,Bank Transfer,INV-2025-00399,REF-000399,
-2025-03-02,-578973,Utility paid,0,27420,-27420,-874546,Electricity,Bank Transfer,INV-2025-00771,REF-000771,
-2025-03-02,-578973,Payroll paid,0,73452,-73452,-947998,Payroll,Bank Transfer,INV-2025-00001,REF-000001,
-2025-03-03,-578973,Payroll paid,0,122190,-122190,-1070188,Payroll,Bank Transfer,INV-2025-00981,REF-000981,
-2025-03-03,-578973,Cash deposited,122520,0,122520,-947668,Internal,,DEP-REF-000332,,Cash Deposit
-2025-03-03,-578973,Cash deposited,39580,0,39580,-908088,Internal,,DEP-REF-001150,,Cash Deposit
-2025-03-03,-578973,Utility paid,0,14510,-14510,-922598,Electricity,Bank Transfer,INV-2025-00177,REF-000177,
-2025-03-03,-578973,Customer payment,32022,0,32022,-890576,Mining Services Corp,Bank Transfer,INV-2025-00195,SET-REF-000195,
-2025-03-04,-578973,Payroll paid,0,105915,-105915,-996491,Payroll,Bank Transfer,INV-2025-00063,REF-000063,
-2025-03-04,-578973,Supplier paid,0,26040,-26040,-1022531,West Africa Petroleum,Bank Transfer,INV-2025-01084,REF-001084,
-2025-03-04,-578973,Cheque deposited,103645,0,103645,-918886,Loyalty Member 001,Cheque Deposit,INV-2025-00556,DEP-REF-000556,CHQ-487621
-2025-03-04,-578973,Cash deposited,75086,0,75086,-843800,Internal,,DEP-REF-000360,,Cash Deposit
-2025-03-04,-578973,Payroll paid,0,73492,-73492,-917292,Payroll,Bank Transfer,INV-2025-00726,REF-000726,
-2025-03-04,-578973,Cash deposited,56940,0,56940,-860352,Internal,,DEP-REF-001172,,Cash Deposit
-2025-03-05,-578973,Cheque deposited,83864,0,83864,-776488,Loyalty Member 001,Cheque Deposit,INV-2025-00972,DEP-REF-000972,CHQ-159969
-2025-03-05,-578973,Cheque deposited,24087,0,24087,-752401,Anonymous / Walk-in,Cheque Deposit,INV-2025-00921,DEP-REF-000921,CHQ-842102
-2025-03-05,-578973,Cheque deposited,119643,0,119643,-632758,Mining Services Corp,Cheque Deposit,INV-2025-00404,DEP-REF-000404,CHQ-326595
-2025-03-05,-578973,Customer payment,110440,0,110440,-522318,Mining Services Corp,Bank Transfer,INV-2025-00311,SET-REF-000311,
-2025-03-06,-578973,Cash deposited,41844,0,41844,-480474,Internal,,DEP-REF-000075,,Cash Deposit
-2025-03-06,-578973,Payroll paid,0,99615,-99615,-580089,Payroll,Bank Transfer,INV-2025-00072,REF-000072,
-2025-03-06,-578973,Cheque deposited,140469,0,140469,-439620,Construction Holdings SL,Cheque Deposit,INV-2025-00897,DEP-REF-000897,CHQ-610193
-2025-03-06,-578973,Supplier paid,0,62700,-62700,-502320,West Africa Petroleum,Bank Transfer,INV-2025-00698,REF-000698,
-2025-03-07,-578973,Utility paid,0,18490,-18490,-520810,Electricity,Bank Transfer,INV-2025-00445,REF-000445,
-2025-03-07,-578973,Payroll paid,0,104766,-104766,-625576,Payroll,Bank Transfer,INV-2025-00908,REF-000908,
-2025-03-07,-578973,Utility paid,0,20789,-20789,-646365,Electricity,Bank Transfer,INV-2025-00225,REF-000225,
-2025-03-08,-578973,Utility paid,0,22022,-22022,-668387,Electricity,Bank Transfer,INV-2025-00120,REF-000120,
-2025-03-08,-578973,Supplier paid,0,67956,-67956,-736343,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-01162,REF-001162,
-2025-03-08,-578973,Cheque deposited,26985,0,26985,-709358,Logistics Co Ltd,Cheque Deposit,INV-2025-00278,DEP-REF-000278,CHQ-828496
-2025-03-08,-578973,Cheque deposited,108180,0,108180,-601178,Logistics Co Ltd,Cheque Deposit,INV-2025-00675,DEP-REF-000675,CHQ-727520
-2025-03-08,-578973,Utility paid,0,13680,-13680,-614858,Electricity,Bank Transfer,INV-2025-00016,REF-000016,
-2025-03-09,-578973,Cheque deposited,101412,0,101412,-513446,Construction Holdings SL,Cheque Deposit,INV-2025-01062,DEP-REF-001062,CHQ-869129
-2025-03-09,-578973,Supplier paid,0,48378,-48378,-561824,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00763,REF-000763,
-2025-03-10,-578973,Cash deposited,118872,0,118872,-442952,Internal,,DEP-REF-000469,,Cash Deposit
-2025-03-10,-578973,Cheque deposited,78774,0,78774,-364178,Logistics Co Ltd,Cheque Deposit,INV-2025-00148,DEP-REF-000148,CHQ-887856
-2025-03-10,-578973,Supplier paid,0,24156,-24156,-388334,West Africa Petroleum,Bank Transfer,INV-2025-00994,REF-000994,
-2025-03-10,-578973,Customer payment,68288,0,68288,-320046,Loyalty Member 001,Bank Transfer,INV-2025-01098,SET-REF-001098,
-2025-03-11,-578973,Cash deposited,35540,0,35540,-284506,Internal,,DEP-REF-000579,,Cash Deposit
-2025-03-11,-578973,Cheque deposited,125158,0,125158,-159348,Anonymous / Walk-in,Cheque Deposit,INV-2025-00045,DEP-REF-000045,CHQ-244411
-2025-03-11,-578973,Customer payment,108906,0,108906,-50442,Loyalty Member 001,Bank Transfer,INV-2025-00783,SET-REF-000783,
-2025-03-11,-578973,Cheque deposited,110946,0,110946,60504,Loyalty Member 001,Cheque Deposit,INV-2025-00205,DEP-REF-000205,CHQ-827122
-2025-03-11,-578973,Customer payment,109053,0,109053,169557,Mining Services Corp,Bank Transfer,INV-2025-00694,SET-REF-000694,
-2025-03-11,-578973,Payroll paid,0,89317,-89317,80240,Payroll,Bank Transfer,INV-2025-00372,REF-000372,
-2025-03-11,-578973,Customer payment,114532,0,114532,194772,Logistics Co Ltd,Bank Transfer,INV-2025-00810,SET-REF-000810,
-2025-03-12,-578973,Cash deposited,14742,0,14742,209514,Internal,,DEP-REF-001049,,Cash Deposit
-2025-03-12,-578973,Cash deposited,112572,0,112572,322086,Internal,,DEP-REF-000090,,Cash Deposit
-2025-03-12,-578973,Supplier paid,0,46440,-46440,275646,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00367,REF-000367,
-2025-03-13,-578973,Utility paid,0,24066,-24066,251580,Electricity,Bank Transfer,INV-2025-00906,REF-000906,
-2025-03-13,-578973,Customer payment,100206,0,100206,351786,Loyalty Member 001,Bank Transfer,INV-2025-00329,SET-REF-000329,
-2025-03-13,-578973,Supplier paid,0,72954,-72954,278832,West Africa Petroleum,Bank Transfer,INV-2025-00523,REF-000523,
-2025-03-13,-578973,Cash deposited,8652,0,8652,287484,Internal,,DEP-REF-000207,,Cash Deposit
-2025-03-14,-578973,Customer payment,80244,0,80244,367728,Mining Services Corp,Bank Transfer,INV-2025-01038,SET-REF-001038,
-2025-03-14,-578973,Customer payment,78520,0,78520,446248,Loyalty Member 001,Bank Transfer,INV-2025-00652,SET-REF-000652,
-2025-03-14,-578973,Payroll paid,0,101726,-101726,344522,Payroll,Bank Transfer,INV-2025-01176,REF-001176,
-2025-03-14,-578973,Cheque deposited,34181,0,34181,378703,Anonymous / Walk-in,Cheque Deposit,INV-2025-00295,DEP-REF-000295,CHQ-364282
-2025-03-15,-578973,Cash deposited,32450,0,32450,411153,Internal,,DEP-REF-000146,,Cash Deposit
-2025-03-16,-578973,Cash deposited,107460,0,107460,518613,Internal,,DEP-REF-000700,,Cash Deposit
-2025-03-16,-578973,Supplier paid,0,121842,-121842,396771,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00315,REF-000315,
-2025-03-17,-578973,Utility paid,0,23782,-23782,372989,Electricity,Bank Transfer,INV-2025-01045,REF-001045,
-2025-03-17,-578973,Cash deposited,79134,0,79134,452123,Internal,,DEP-REF-000773,,Cash Deposit
-2025-03-18,-578973,Utility paid,0,17545,-17545,434578,Electricity,Bank Transfer,INV-2025-00580,REF-000580,
-2025-03-18,-578973,Supplier paid,0,148654,-148654,285924,West Africa Petroleum,Bank Transfer,INV-2025-00355,REF-000355,
-2025-03-18,-578973,Utility paid,0,22376,-22376,263548,Electricity,Bank Transfer,INV-2025-00955,REF-000955,
-2025-03-18,-578973,Utility paid,0,18767,-18767,244781,Electricity,Bank Transfer,INV-2025-01026,REF-001026,
-2025-03-20,-578973,Cash deposited,57152,0,57152,301933,Internal,,DEP-REF-000174,,Cash Deposit
-2025-03-20,-578973,Payroll paid,0,91957,-91957,209976,Payroll,Bank Transfer,INV-2025-00673,REF-000673,
-2025-03-21,-578973,Utility paid,0,24060,-24060,185916,Electricity,Bank Transfer,INV-2025-00110,REF-000110,
-2025-03-21,-578973,Utility paid,0,20326,-20326,165590,Electricity,Bank Transfer,INV-2025-00152,REF-000152,
-2025-03-21,-578973,Cash deposited,29610,0,29610,195200,Internal,,DEP-REF-001109,,Cash Deposit
-2025-03-21,-578973,Utility paid,0,16392,-16392,178808,Electricity,Bank Transfer,INV-2025-00711,REF-000711,
-2025-03-22,-578973,Cheque deposited,7200,0,7200,186008,Anonymous / Walk-in,Cheque Deposit,INV-2025-00880,DEP-REF-000880,CHQ-881489
-2025-03-22,-578973,Utility paid,0,22180,-22180,163828,Electricity,Bank Transfer,INV-2025-00486,REF-000486,
-2025-03-22,-578973,Cheque deposited,47520,0,47520,211348,Mining Services Corp,Cheque Deposit,INV-2025-00956,DEP-REF-000956,CHQ-895668
-2025-03-22,-578973,Customer payment,115748,0,115748,327096,Logistics Co Ltd,Bank Transfer,INV-2025-00256,SET-REF-000256,
-2025-03-23,-578973,Customer payment,109076,0,109076,436172,Mining Services Corp,Bank Transfer,INV-2025-01059,SET-REF-001059,
-2025-03-23,-578973,Utility paid,0,18933,-18933,417239,Electricity,Bank Transfer,INV-2025-00157,REF-000157,
-2025-03-23,-578973,Utility paid,0,27166,-27166,390073,Electricity,Bank Transfer,INV-2025-00654,REF-000654,
-2025-03-23,-578973,Cheque deposited,114092,0,114092,504165,Mining Services Corp,Cheque Deposit,INV-2025-00996,DEP-REF-000996,CHQ-435339
-2025-03-23,-578973,Cash deposited,55708,0,55708,559873,Internal,,DEP-REF-000534,,Cash Deposit
-2025-03-23,-578973,Utility paid,0,19833,-19833,540040,Electricity,Bank Transfer,INV-2025-00214,REF-000214,
-2025-03-24,-578973,Customer payment,125040,0,125040,665080,Loyalty Member 001,Bank Transfer,INV-2025-01166,SET-REF-001166,
-2025-03-24,-578973,Cheque deposited,51891,0,51891,716971,Loyalty Member 001,Cheque Deposit,INV-2025-01032,DEP-REF-001032,CHQ-970806
-2025-03-24,-578973,Cheque deposited,116842,0,116842,833813,Mining Services Corp,Cheque Deposit,INV-2025-00100,DEP-REF-000100,CHQ-211431
-2025-03-25,-578973,Cash deposited,98460,0,98460,932273,Internal,,DEP-REF-000071,,Cash Deposit
-2025-03-25,-578973,Cheque deposited,53300,0,53300,985573,Logistics Co Ltd,Cheque Deposit,INV-2025-00436,DEP-REF-000436,CHQ-988763
-2025-03-25,-578973,Customer payment,46379,0,46379,1031952,Loyalty Member 001,Bank Transfer,INV-2025-01009,SET-REF-001009,
-2025-03-25,-578973,Cheque deposited,44793,0,44793,1076745,Anonymous / Walk-in,Cheque Deposit,INV-2025-00745,DEP-REF-000745,CHQ-502650
-2025-03-26,-578973,Cash deposited,116314,0,116314,1193059,Internal,,DEP-REF-000561,,Cash Deposit
-2025-03-26,-578973,Cheque deposited,69872,0,69872,1262931,Anonymous / Walk-in,Cheque Deposit,INV-2025-00927,DEP-REF-000927,CHQ-990319
-2025-03-26,-578973,Payroll paid,0,100665,-100665,1162266,Payroll,Bank Transfer,INV-2025-00930,REF-000930,
-2025-03-27,-578973,Customer payment,79816,0,79816,1242082,Construction Holdings SL,Bank Transfer,INV-2025-00682,SET-REF-000682,
-2025-03-27,-578973,Cheque deposited,25517,0,25517,1267599,Loyalty Member 001,Cheque Deposit,INV-2025-00161,DEP-REF-000161,CHQ-298494
-2025-03-27,-578973,Utility paid,0,25797,-25797,1241802,Electricity,Bank Transfer,INV-2025-00191,REF-000191,
-2025-03-27,-578973,Payroll paid,0,67023,-67023,1174779,Payroll,Bank Transfer,INV-2025-00853,REF-000853,
-2025-03-28,-578973,Supplier paid,0,110390,-110390,1064389,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00633,REF-000633,
-2025-03-28,-578973,Cash deposited,55220,0,55220,1119609,Internal,,DEP-REF-000748,,Cash Deposit
-2025-03-28,-578973,Utility paid,0,17222,-17222,1102387,Electricity,Bank Transfer,INV-2025-00706,REF-000706,
-2025-03-28,-578973,Customer payment,95216,0,95216,1197603,Logistics Co Ltd,Bank Transfer,INV-2025-00865,SET-REF-000865,
-2025-03-29,-578973,Utility paid,0,15462,-15462,1182141,Electricity,Bank Transfer,INV-2025-01161,REF-001161,
-2025-03-29,-578973,Cheque deposited,111447,0,111447,1293588,Logistics Co Ltd,Cheque Deposit,INV-2025-01125,DEP-REF-001125,CHQ-643116
-2025-03-29,-578973,Payroll paid,0,129826,-129826,1163762,Payroll,Bank Transfer,INV-2025-00427,REF-000427,
-2025-03-29,-578973,Payroll paid,0,86130,-86130,1077632,Payroll,Bank Transfer,INV-2025-00201,REF-000201,
-2025-03-30,-578973,Payroll paid,0,93052,-93052,984580,Payroll,Bank Transfer,INV-2025-00119,REF-000119,
-2025-03-30,-578973,Utility paid,0,16939,-16939,967641,Electricity,Bank Transfer,INV-2025-00846,REF-000846,
-2025-03-30,-578973,Cash deposited,93898,0,93898,1061539,Internal,,DEP-REF-001029,,Cash Deposit
-2025-03-31,-578973,Supplier paid,0,46702,-46702,1014837,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00915,REF-000915,
-2025-03-31,-578973,Supplier paid,0,53718,-53718,961119,West Africa Petroleum,Bank Transfer,INV-2025-00048,REF-000048,
-2025-03-31,-578973,Payroll paid,0,99652,-99652,861467,Payroll,Bank Transfer,INV-2025-01186,REF-001186,
-2025-03-31,-578973,Customer payment,18238,0,18238,879705,Logistics Co Ltd,Bank Transfer,INV-2025-00754,SET-REF-000754,
+Date,Description,Debit,Credit,Net Movement,Running Balance,Counterparty Name,Payment Method,Invoice Number,Payment Reference,Cheque Number
+3/1/2025,Customer payment,61236,0,61236,-517737,Loyalty Member 001,Bank Transfer,INV-2025-00467,SET-REF-000467,
+3/1/2025,Supplier paid,0,20878,-20878,-538615,West Africa Petroleum,Bank Transfer,INV-2025-01137,REF-001137,
+3/1/2025,Utility paid,0,17869,-17869,-556484,Electricity,Bank Transfer,INV-2025-01108,REF-001108,
+3/1/2025,Cash deposited,45780,0,45780,-510704,Internal,,DEP-REF-000241,,Cash Deposit
+3/1/2025,Payroll paid,0,124360,-124360,-635064,Payroll,Bank Transfer,INV-2025-00013,REF-000013,
+3/1/2025,Supplier paid,0,134080,-134080,-769144,West Africa Petroleum,Bank Transfer,INV-2025-00273,REF-000273,
+3/2/2025,Payroll paid,0,77982,-77982,-847126,Payroll,Bank Transfer,INV-2025-00399,REF-000399,
+3/2/2025,Utility paid,0,27420,-27420,-874546,Electricity,Bank Transfer,INV-2025-00771,REF-000771,
+3/2/2025,Payroll paid,0,73452,-73452,-947998,Payroll,Bank Transfer,INV-2025-00001,REF-000001,
+3/3/2025,Payroll paid,0,122190,-122190,-1070188,Payroll,Bank Transfer,INV-2025-00981,REF-000981,
+3/3/2025,Cash deposited,122520,0,122520,-947668,Internal,,DEP-REF-000332,,Cash Deposit
+3/3/2025,Cash deposited,39580,0,39580,-908088,Internal,,DEP-REF-001150,,Cash Deposit
+3/3/2025,Utility paid,0,14510,-14510,-922598,Electricity,Bank Transfer,INV-2025-00177,REF-000177,
+3/3/2025,Customer payment,32022,0,32022,-890576,Mining Services Corp,Bank Transfer,INV-2025-00195,SET-REF-000195,
+3/4/2025,Payroll paid,0,105915,-105915,-996491,Payroll,Bank Transfer,INV-2025-00063,REF-000063,
+3/4/2025,Supplier paid,0,26040,-26040,-1022531,West Africa Petroleum,Bank Transfer,INV-2025-01084,REF-001084,
+3/4/2025,Cheque deposited,103645,0,103645,-918886,Loyalty Member 001,Cheque Deposit,INV-2025-00556,DEP-REF-000556,CHQ-487621
+3/4/2025,Cash deposited,75086,0,75086,-843800,Internal,,DEP-REF-000360,,Cash Deposit
+3/4/2025,Payroll paid,0,73492,-73492,-917292,Payroll,Bank Transfer,INV-2025-00726,REF-000726,
+3/4/2025,Cash deposited,56940,0,56940,-860352,Internal,,DEP-REF-001172,,Cash Deposit
+3/5/2025,Cheque deposited,83864,0,83864,-776488,Loyalty Member 001,Cheque Deposit,INV-2025-00972,DEP-REF-000972,CHQ-159969
+3/5/2025,Cheque deposited,24087,0,24087,-752401,Anonymous / Walk-in,Cheque Deposit,INV-2025-00921,DEP-REF-000921,CHQ-842102
+3/5/2025,Cheque deposited,119643,0,119643,-632758,Mining Services Corp,Cheque Deposit,INV-2025-00404,DEP-REF-000404,CHQ-326595
+3/5/2025,Customer payment,110440,0,110440,-522318,Mining Services Corp,Bank Transfer,INV-2025-00311,SET-REF-000311,
+3/6/2025,Cash deposited,41844,0,41844,-480474,Internal,,DEP-REF-000075,,Cash Deposit
+3/6/2025,Payroll paid,0,99615,-99615,-580089,Payroll,Bank Transfer,INV-2025-00072,REF-000072,
+3/6/2025,Cheque deposited,140469,0,140469,-439620,Construction Holdings SL,Cheque Deposit,INV-2025-00897,DEP-REF-000897,CHQ-610193
+3/6/2025,Supplier paid,0,62700,-62700,-502320,West Africa Petroleum,Bank Transfer,INV-2025-00698,REF-000698,
+3/7/2025,Utility paid,0,18490,-18490,-520810,Electricity,Bank Transfer,INV-2025-00445,REF-000445,
+3/7/2025,Payroll paid,0,104766,-104766,-625576,Payroll,Bank Transfer,INV-2025-00908,REF-000908,
+3/7/2025,Utility paid,0,20789,-20789,-646365,Electricity,Bank Transfer,INV-2025-00225,REF-000225,
+3/8/2025,Utility paid,0,22022,-22022,-668387,Electricity,Bank Transfer,INV-2025-00120,REF-000120,
+3/8/2025,Supplier paid,0,67956,-67956,-736343,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-01162,REF-001162,
+3/8/2025,Cheque deposited,26985,0,26985,-709358,Logistics Co Ltd,Cheque Deposit,INV-2025-00278,DEP-REF-000278,CHQ-828496
+3/8/2025,Cheque deposited,108180,0,108180,-601178,Logistics Co Ltd,Cheque Deposit,INV-2025-00675,DEP-REF-000675,CHQ-727520
+3/8/2025,Utility paid,0,13680,-13680,-614858,Electricity,Bank Transfer,INV-2025-00016,REF-000016,
+3/9/2025,Cheque deposited,101412,0,101412,-513446,Construction Holdings SL,Cheque Deposit,INV-2025-01062,DEP-REF-001062,CHQ-869129
+3/9/2025,Supplier paid,0,48378,-48378,-561824,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00763,REF-000763,
+3/10/2025,Cash deposited,118872,0,118872,-442952,Internal,,DEP-REF-000469,,Cash Deposit
+3/10/2025,Cheque deposited,78774,0,78774,-364178,Logistics Co Ltd,Cheque Deposit,INV-2025-00148,DEP-REF-000148,CHQ-887856
+3/10/2025,Supplier paid,0,24156,-24156,-388334,West Africa Petroleum,Bank Transfer,INV-2025-00994,REF-000994,
+3/10/2025,Customer payment,68288,0,68288,-320046,Loyalty Member 001,Bank Transfer,INV-2025-01098,SET-REF-001098,
+3/11/2025,Cash deposited,35540,0,35540,-284506,Internal,,DEP-REF-000579,,Cash Deposit
+3/11/2025,Cheque deposited,125158,0,125158,-159348,Anonymous / Walk-in,Cheque Deposit,INV-2025-00045,DEP-REF-000045,CHQ-244411
+3/11/2025,Customer payment,108906,0,108906,-50442,Loyalty Member 001,Bank Transfer,INV-2025-00783,SET-REF-000783,
+3/11/2025,Cheque deposited,110946,0,110946,60504,Loyalty Member 001,Cheque Deposit,INV-2025-00205,DEP-REF-000205,CHQ-827122
+3/11/2025,Customer payment,109053,0,109053,169557,Mining Services Corp,Bank Transfer,INV-2025-00694,SET-REF-000694,
+3/11/2025,Payroll paid,0,89317,-89317,80240,Payroll,Bank Transfer,INV-2025-00372,REF-000372,
+3/11/2025,Customer payment,114532,0,114532,194772,Logistics Co Ltd,Bank Transfer,INV-2025-00810,SET-REF-000810,
+3/12/2025,Cash deposited,14742,0,14742,209514,Internal,,DEP-REF-001049,,Cash Deposit
+3/12/2025,Cash deposited,112572,0,112572,322086,Internal,,DEP-REF-000090,,Cash Deposit
+3/12/2025,Supplier paid,0,46440,-46440,275646,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00367,REF-000367,
+3/13/2025,Utility paid,0,24066,-24066,251580,Electricity,Bank Transfer,INV-2025-00906,REF-000906,
+3/13/2025,Customer payment,100206,0,100206,351786,Loyalty Member 001,Bank Transfer,INV-2025-00329,SET-REF-000329,
+3/13/2025,Supplier paid,0,72954,-72954,278832,West Africa Petroleum,Bank Transfer,INV-2025-00523,REF-000523,
+3/13/2025,Cash deposited,8652,0,8652,287484,Internal,,DEP-REF-000207,,Cash Deposit
+3/14/2025,Customer payment,80244,0,80244,367728,Mining Services Corp,Bank Transfer,INV-2025-01038,SET-REF-001038,
+3/14/2025,Customer payment,78520,0,78520,446248,Loyalty Member 001,Bank Transfer,INV-2025-00652,SET-REF-000652,
+3/14/2025,Payroll paid,0,101726,-101726,344522,Payroll,Bank Transfer,INV-2025-01176,REF-001176,
+3/14/2025,Cheque deposited,34181,0,34181,378703,Anonymous / Walk-in,Cheque Deposit,INV-2025-00295,DEP-REF-000295,CHQ-364282
+3/15/2025,Cash deposited,32450,0,32450,411153,Internal,,DEP-REF-000146,,Cash Deposit
+3/16/2025,Cash deposited,107460,0,107460,518613,Internal,,DEP-REF-000700,,Cash Deposit
+3/16/2025,Supplier paid,0,121842,-121842,396771,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00315,REF-000315,
+3/17/2025,Utility paid,0,23782,-23782,372989,Electricity,Bank Transfer,INV-2025-01045,REF-001045,
+3/17/2025,Cash deposited,79134,0,79134,452123,Internal,,DEP-REF-000773,,Cash Deposit
+3/18/2025,Utility paid,0,17545,-17545,434578,Electricity,Bank Transfer,INV-2025-00580,REF-000580,
+3/18/2025,Supplier paid,0,148654,-148654,285924,West Africa Petroleum,Bank Transfer,INV-2025-00355,REF-000355,
+3/18/2025,Utility paid,0,22376,-22376,263548,Electricity,Bank Transfer,INV-2025-00955,REF-000955,
+3/18/2025,Utility paid,0,18767,-18767,244781,Electricity,Bank Transfer,INV-2025-01026,REF-001026,
+3/20/2025,Cash deposited,57152,0,57152,301933,Internal,,DEP-REF-000174,,Cash Deposit
+3/20/2025,Payroll paid,0,91957,-91957,209976,Payroll,Bank Transfer,INV-2025-00673,REF-000673,
+3/21/2025,Utility paid,0,24060,-24060,185916,Electricity,Bank Transfer,INV-2025-00110,REF-000110,
+3/21/2025,Utility paid,0,20326,-20326,165590,Electricity,Bank Transfer,INV-2025-00152,REF-000152,
+3/21/2025,Cash deposited,29610,0,29610,195200,Internal,,DEP-REF-001109,,Cash Deposit
+3/21/2025,Utility paid,0,16392,-16392,178808,Electricity,Bank Transfer,INV-2025-00711,REF-000711,
+3/22/2025,Cheque deposited,7200,0,7200,186008,Anonymous / Walk-in,Cheque Deposit,INV-2025-00880,DEP-REF-000880,CHQ-881489
+3/22/2025,Utility paid,0,22180,-22180,163828,Electricity,Bank Transfer,INV-2025-00486,REF-000486,
+3/22/2025,Cheque deposited,47520,0,47520,211348,Mining Services Corp,Cheque Deposit,INV-2025-00956,DEP-REF-000956,CHQ-895668
+3/22/2025,Customer payment,115748,0,115748,327096,Logistics Co Ltd,Bank Transfer,INV-2025-00256,SET-REF-000256,
+3/23/2025,Customer payment,109076,0,109076,436172,Mining Services Corp,Bank Transfer,INV-2025-01059,SET-REF-001059,
+3/23/2025,Utility paid,0,18933,-18933,417239,Electricity,Bank Transfer,INV-2025-00157,REF-000157,
+3/23/2025,Utility paid,0,27166,-27166,390073,Electricity,Bank Transfer,INV-2025-00654,REF-000654,
+3/23/2025,Cheque deposited,114092,0,114092,504165,Mining Services Corp,Cheque Deposit,INV-2025-00996,DEP-REF-000996,CHQ-435339
+3/23/2025,Cash deposited,55708,0,55708,559873,Internal,,DEP-REF-000534,,Cash Deposit
+3/23/2025,Utility paid,0,19833,-19833,540040,Electricity,Bank Transfer,INV-2025-00214,REF-000214,
+3/24/2025,Customer payment,125040,0,125040,665080,Loyalty Member 001,Bank Transfer,INV-2025-01166,SET-REF-001166,
+3/24/2025,Cheque deposited,51891,0,51891,716971,Loyalty Member 001,Cheque Deposit,INV-2025-01032,DEP-REF-001032,CHQ-970806
+3/24/2025,Cheque deposited,116842,0,116842,833813,Mining Services Corp,Cheque Deposit,INV-2025-00100,DEP-REF-000100,CHQ-211431
+3/25/2025,Cash deposited,98460,0,98460,932273,Internal,,DEP-REF-000071,,Cash Deposit
+3/25/2025,Cheque deposited,53300,0,53300,985573,Logistics Co Ltd,Cheque Deposit,INV-2025-00436,DEP-REF-000436,CHQ-988763
+3/25/2025,Customer payment,46379,0,46379,1031952,Loyalty Member 001,Bank Transfer,INV-2025-01009,SET-REF-001009,
+3/25/2025,Cheque deposited,44793,0,44793,1076745,Anonymous / Walk-in,Cheque Deposit,INV-2025-00745,DEP-REF-000745,CHQ-502650
+3/26/2025,Cash deposited,116314,0,116314,1193059,Internal,,DEP-REF-000561,,Cash Deposit
+3/26/2025,Cheque deposited,69872,0,69872,1262931,Anonymous / Walk-in,Cheque Deposit,INV-2025-00927,DEP-REF-000927,CHQ-990319
+3/26/2025,Payroll paid,0,100665,-100665,1162266,Payroll,Bank Transfer,INV-2025-00930,REF-000930,
+3/27/2025,Customer payment,79816,0,79816,1242082,Construction Holdings SL,Bank Transfer,INV-2025-00682,SET-REF-000682,
+3/27/2025,Cheque deposited,25517,0,25517,1267599,Loyalty Member 001,Cheque Deposit,INV-2025-00161,DEP-REF-000161,CHQ-298494
+3/27/2025,Utility paid,0,25797,-25797,1241802,Electricity,Bank Transfer,INV-2025-00191,REF-000191,
+3/27/2025,Payroll paid,0,67023,-67023,1174779,Payroll,Bank Transfer,INV-2025-00853,REF-000853,
+3/28/2025,Supplier paid,0,110390,-110390,1064389,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00633,REF-000633,
+3/28/2025,Cash deposited,55220,0,55220,1119609,Internal,,DEP-REF-000748,,Cash Deposit
+3/28/2025,Utility paid,0,17222,-17222,1102387,Electricity,Bank Transfer,INV-2025-00706,REF-000706,
+3/28/2025,Customer payment,95216,0,95216,1197603,Logistics Co Ltd,Bank Transfer,INV-2025-00865,SET-REF-000865,
+3/29/2025,Utility paid,0,15462,-15462,1182141,Electricity,Bank Transfer,INV-2025-01161,REF-001161,
+3/29/2025,Cheque deposited,111447,0,111447,1293588,Logistics Co Ltd,Cheque Deposit,INV-2025-01125,DEP-REF-001125,CHQ-643116
+3/29/2025,Payroll paid,0,129826,-129826,1163762,Payroll,Bank Transfer,INV-2025-00427,REF-000427,
+3/29/2025,Payroll paid,0,86130,-86130,1077632,Payroll,Bank Transfer,INV-2025-00201,REF-000201,
+3/30/2025,Payroll paid,0,93052,-93052,984580,Payroll,Bank Transfer,INV-2025-00119,REF-000119,
+3/30/2025,Utility paid,0,16939,-16939,967641,Electricity,Bank Transfer,INV-2025-00846,REF-000846,
+3/30/2025,Cash deposited,93898,0,93898,1061539,Internal,,DEP-REF-001029,,Cash Deposit
+3/31/2025,Supplier paid,0,46702,-46702,1014837,Atlantic Fuel Suppliers,Bank Transfer,INV-2025-00915,REF-000915,
+3/31/2025,Supplier paid,0,53718,-53718,961119,West Africa Petroleum,Bank Transfer,INV-2025-00048,REF-000048,
+3/31/2025,Payroll paid,0,99652,-99652,861467,Payroll,Bank Transfer,INV-2025-01186,REF-001186,
+3/31/2025,Customer payment,18238,0,18238,879705,Logistics Co Ltd,Bank Transfer,INV-2025-00754,SET-REF-000754,

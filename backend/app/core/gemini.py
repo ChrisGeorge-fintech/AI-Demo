@@ -59,7 +59,7 @@ async def stream(
             yield chunk.text
 
 
-async def embed(text: str, model: str = "text-embedding-004") -> list[float]:
+async def embed(text: str, model: str = "gemini-embedding-001") -> list[float]:
     """Generate an embedding vector via the async Gemini API."""
     client = get_client()
     result = await client.aio.models.embed_content(
