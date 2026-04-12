@@ -12,6 +12,7 @@ export default function Home() {
         <NavCard href="/data-viz" title="Data Visualisation" description="Explore financial data with natural language." />
         <NavCard href="/receipts" title="Receipt Scanner" description="Upload receipts and receive an emailed analysis." />
         <NavCard href="/transactions" title="Transaction Classifier" description="Classify transactions against budget lines." />
+        <NavCard href="/ledger" title="Client Ledger Portal" description="Submit general ledgers with automatic version change analysis." />
       </div>
     </main>
   );

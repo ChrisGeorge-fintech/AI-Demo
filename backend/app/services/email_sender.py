@@ -11,7 +11,7 @@ def send_receipt_analysis(to_email: str, subject: str, html_body: str) -> None:
     resend.api_key = settings.resend_api_key
 
     resend.Emails.send({
-        "from": "AI Accounting Portal <receipts@resend.dev>",
+        "from": "AI Accounting Portal <onboarding@resend.dev>",
         "to": [to_email],
         "subject": subject,
         "html": html_body,

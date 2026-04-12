@@ -24,6 +24,17 @@ CREATE TABLE IF NOT EXISTS jobs (
 )
 """
 
+CREATE_LEDGER_TABLE = """
+CREATE TABLE IF NOT EXISTS ledger_submissions (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id   TEXT    NOT NULL,
+    version     INTEGER NOT NULL,
+    filename    TEXT,
+    content     TEXT    NOT NULL,
+    submitted_at TEXT   NOT NULL DEFAULT (datetime('now'))
+)
+"""
+
 
 async def init_db() -> None:
     """Create tables and seed the default admin user if it doesn't exist."""
@@ -31,6 +42,7 @@ async def init_db() -> None:
     async with aiosqlite.connect(settings.database_url) as db:
         await db.execute(CREATE_USERS_TABLE)
         await db.execute(CREATE_JOBS_TABLE)
+        await db.execute(CREATE_LEDGER_TABLE)
         await db.commit()
 
         # Seed a default admin account — credentials come from env vars or fallback defaults

@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
     jwt_expire_hours: int = 8
     resend_api_key: str = ""
+    staff_email: str = ""
     backend_url: str = "http://backend:8000"
     max_concurrent_requests: int = 3
     csv_data_path: str = "./data/sample.csv"

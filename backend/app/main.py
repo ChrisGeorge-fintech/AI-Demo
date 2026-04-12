@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.db import init_db
 from app.core.queue import init_semaphore
 from app.rag.budget_rag import bootstrap_budget_rag
-from app.api import auth, jobs, chat, data_viz, receipts, transactions
+from app.api import auth, jobs, chat, data_viz, receipts, transactions, ledger
 from app.core.config import get_settings
 
 
@@ -51,6 +51,7 @@ app.include_router(chat.router)
 app.include_router(data_viz.router)
 app.include_router(receipts.router)
 app.include_router(transactions.router)
+app.include_router(ledger.router)
 
 
 @app.get("/health")
