@@ -46,8 +46,10 @@ function getToken(): string {
 function ChartCard({ v }: { v: ChartVisual }) {
   const chartData = v.data.map((d) => ({ name: d.label, value: d.value }));
 
-  const tooltipFormatter = (val: number) =>
-    val >= 1000 ? val.toLocaleString(undefined, { minimumFractionDigits: 0 }) : val;
+  const tooltipFormatter = (val: number | string | readonly (number | string)[] | undefined): string | number => {
+    const n = typeof val === "number" ? val : Number(val) || 0;
+    return n >= 1000 ? n.toLocaleString(undefined, { minimumFractionDigits: 0 }) : n;
+  };
 
   if (v.type === "pie") {
     return (
@@ -60,12 +62,12 @@ function ChartCard({ v }: { v: ChartVisual }) {
             cx="50%"
             cy="50%"
             outerRadius={110}
-            label={({ name, percent }) => `${name} (${(percent * 100).toFixed(1)}%)`}
+            label={({ name, percent }) => `${name} (${(typeof percent === "number" ? percent * 100 : 0).toFixed(1)}%)`}
             labelLine={false}
           >
             {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
           </Pie>
-          <Tooltip formatter={(val: number) => tooltipFormatter(val)} />
+          <Tooltip formatter={tooltipFormatter} />
           <Legend wrapperStyle={{ fontSize: 12 }} />
         </PieChart>
       </ResponsiveContainer>
@@ -79,7 +81,7 @@ function ChartCard({ v }: { v: ChartVisual }) {
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
           <XAxis dataKey="name" tick={{ fontSize: 11 }} label={v.x_label ? { value: v.x_label, position: "insideBottom", offset: -16, fontSize: 11 } : undefined} />
           <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v} label={v.y_label ? { value: v.y_label, angle: -90, position: "insideLeft", fontSize: 11 } : undefined} />
-          <Tooltip formatter={(val: number) => tooltipFormatter(val)} />
+          <Tooltip formatter={tooltipFormatter} />
           <Legend wrapperStyle={{ fontSize: 12 }} />
           <Line type="monotone" dataKey="value" stroke={COLORS[0]} strokeWidth={2} dot={{ r: 4 }} activeDot={{ r: 6 }} name={v.y_label || "Value"} />
         </LineChart>
@@ -94,7 +96,7 @@ function ChartCard({ v }: { v: ChartVisual }) {
         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
         <XAxis dataKey="name" tick={{ fontSize: 11 }} label={v.x_label ? { value: v.x_label, position: "insideBottom", offset: -16, fontSize: 11 } : undefined} />
         <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => v >= 1000 ? `${(v / 1000).toFixed(0)}k` : v} label={v.y_label ? { value: v.y_label, angle: -90, position: "insideLeft", fontSize: 11 } : undefined} />
-        <Tooltip formatter={(val: number) => tooltipFormatter(val)} cursor={{ fill: "#f0f4ff" }} />
+        <Tooltip formatter={tooltipFormatter} cursor={{ fill: "#f0f4ff" }} />
         <Legend wrapperStyle={{ fontSize: 12 }} />
         <Bar dataKey="value" radius={[4, 4, 0, 0]} name={v.y_label || "Value"}>
           {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
